@@ -18,7 +18,7 @@ parameters = cfg.getParameters()
 # date format checker
 try: 
 	parameters.get('Date_preset')
-except ValueError:
-    raise ValueError("Incorrect date format, should be YYYY-MM-DD")
+except NameError:
+    raise NameError("Incorrect date format, should be YYYY-MM-DD")
 else:
 	print "well, it WASN'T defined after all!"
